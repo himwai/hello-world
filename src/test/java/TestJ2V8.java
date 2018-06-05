@@ -177,6 +177,32 @@ public class TestJ2V8 {
 //    	engine.release();
     }
     
+    @Test
+    public void testNodeByFile() throws IOException {
+    	String filename = "/test-node.js";
+    	assertNotNull(this.getClass().getResource(filename));
+    	
+    	File nodejsFile = new File(this.getClass().getResource(filename).getFile());
+    	
+    	JavaCallback callback = new JavaCallback() {
+    		public Object invoke(V8Object receiver, V8Array parameters) {
+    			for (String key : receiver.getKeys()) System.out.println(key);
+    			return "Hello, JavaWorld!";
+    	    }
+    		
+    	};
+    	
+    	V8 engine = nodeJS.getRuntime();
+    	engine.registerJavaMethod(callback, "someJavaMethod");
+    	
+    	nodeJS.exec(nodejsFile);
+    	while(nodeJS.isRunning()) {
+    		nodeJS.handleMessage();
+    	}
+    }
+    
+    
+    
     private V8Function fnCallback(JavaCallback func) {
     	return new V8Function(nodeJS.getRuntime(), func);
     }
