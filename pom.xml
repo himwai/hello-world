@@ -82,11 +82,11 @@
 			</activation>
 			<dependencies>
 				<!-- https://mvnrepository.com/artifact/com.eclipsesource.j2v8/j2v8_linux_x86_64 -->
-				<dependency>
-					<groupId>com.eclipsesource.j2v8</groupId>
-					<artifactId>j2v8_linux_x86_64</artifactId>
-					<version>4.7.1</version>
-				</dependency>
+				<!-- <dependency> -->
+				<!-- <groupId>com.eclipsesource.j2v8</groupId> -->
+				<!-- <artifactId>j2v8_linux_x86_64</artifactId> -->
+				<!-- <version>4.7.1</version> -->
+				<!-- </dependency> -->
 
 				<!-- https://mvnrepository.com/artifact/org.eclipse.swt/org.eclipse.swt.gtk.linux.x86_64 -->
 				<dependency>
@@ -338,6 +338,13 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.6.3</version>
 			<scope>test</scope>
 		</dependency>
 
