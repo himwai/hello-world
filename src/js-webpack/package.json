@@ -1,0 +1,16 @@
+{
+  "name": "js-ui-webpack",
+  "version": "1.0.0",
+  "description": "Example of UI using reactJs",
+  "author": "Charles Ting",
+  "private": true,
+  "homepage": ".",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
