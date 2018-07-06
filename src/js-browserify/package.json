@@ -1,0 +1,61 @@
+{
+  "name": "cityray-ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "main_test": "test.js",
+  "browser": "index.js",
+  "browser_test": "test.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "react",
+            "env"
+          ]
+        }
+      ]
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env"
+    ]
+  },
+  "scripts": {
+    "clean": "rimraf build/temp",
+    "babel": "babel src/main/webapp/resources/jsx -d build/temp/js",
+    "browserify": "browserify build/temp/js/index.js > build/temp/index-bundle.js",
+    "test": "browserify build/temp/js/test.js > src/main/webapp/bundle/test-bundle.js",
+    "browserify-babel": "browserify src/main/webapp/resources/jsx/test.jsx > src/main/webapp/bundle/test-bundle.js",
+    "uglifyjs": "uglifyjs build/temp/index-bundle.js -o src/main/webapp/bundle/index-bundle.js",
+    "build-all": "node build/build-all.js"
+  },
+  "author": "Charles Ting",
+  "private": true,
+  "license": "Unlicense",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.0",
+    "fs-extra": "^6.0.1",
+    "jquery": "^3.3.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.3.24"
+  },
+  "dependencies": {
+    "draft-js": "^0.10.5",
+    "npm": "^6.0.1",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-sidebar": "0.0.1",
+    "react-draft-wysiwyg": "^1.12.13"
+  }
+}
