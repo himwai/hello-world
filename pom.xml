@@ -20,6 +20,7 @@
 		<jstl.version>1.2</jstl.version>
 		<servletapi.version>3.1.0</servletapi.version>
 		<mssql.version>6.2.2.jre8</mssql.version>
+		<birt.version>4.4.2</birt.version>
 	</properties>
 
 	<build>
@@ -340,12 +341,19 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
 			<version>2.6.3</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.birt.runtime/org.eclipse.birt.runtime -->
+		<dependency>
+			<groupId>org.eclipse.birt.runtime</groupId>
+			<artifactId>org.eclipse.birt.runtime</artifactId>
+			<version>${birt.version}</version>
 		</dependency>
 
 	</dependencies>
