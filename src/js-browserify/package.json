@@ -37,7 +37,8 @@
 		"test": "browserify -t browserify-css src/jsx/test.jsx > src/bundle/test-bundle.js",
 		"browserify-babel": "browserify -t browserify-css src/jsx/index.jsx > src/bundle/index-bundle.js",
 		"uglifyjs": "uglifyjs src/bundle/index-bundle.js -o src/bundle/bundle.js",
-		"build-all": "node build/build-all.js"
+		"build-all-js": "node build/build-all.js",
+		"build": "npm run browserify && npm run uglifyjs"
 	},
 	"author": "Charles Ting",
 	"private": true,
@@ -54,6 +55,7 @@
 		"fs-extra": "^6.0.1",
 		"jquery": "^3.3.1",
 		"mkdirp": "^0.5.1",
+		"nashorn-polyfill": "^0.2.4",
 		"react": "^16.3.2",
 		"react-dom": "^16.3.2",
 		"rimraf": "^2.6.2",
