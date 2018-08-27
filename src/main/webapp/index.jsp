@@ -22,7 +22,6 @@
 </head>
 
 <body>
-<h1>Test React</h1>
 <div id="root" />
 
 <script src="${resources}/bundle.js"></script>
