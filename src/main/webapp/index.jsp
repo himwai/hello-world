@@ -17,14 +17,17 @@
 <html>
 
 <head>
-<meta charset="ISO-8859-1">
-<title>Test React</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Test React</title>
 </head>
 
 <body>
 <div id="root" />
 
-<script src="${resources}/bundle.js"></script>
+<script src="${resources}/bundle-index.js"></script>
 </body>
 
 </html>
