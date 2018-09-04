@@ -4,6 +4,7 @@ import SockJsClient from "react-stomp";
 import UsernameGenerator from "username-generator";
 import Fetch from "json-fetch";
 import { TalkBox } from "react-talk";
+import './index.css';
 
 const randomstring = require("randomstring");
 

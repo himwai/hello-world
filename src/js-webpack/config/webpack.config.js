@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const appDirectory = fs.realpathSync(process.cwd());
 // console.log("appDirectory:", appDirectory);
@@ -12,14 +13,20 @@ const appSrcIndexFile = path.resolve(appSrcPath, "index.js");
 const appBuildPath = path.resolve(appDirectory, "../main/webapp/resources");
 
 module.exports = {
+	mode : 'production',
 	entry : {
 		index : appSrcIndexFile
 	},
-	devtool : "inline-source-map",
+	// devtool : "inline-source-map",
 	output : {
 		path : appBuildPath,
 		filename : "bundle-[name].js"
 	},
+
+	plugins : [ new MiniCssExtractPlugin({
+		filename : '[name].[hash].css',
+		chunkFilename : '[id].[hash].css',
+	}) ],
 
 	module : {
 		rules : [ {
@@ -29,14 +36,6 @@ module.exports = {
 				loader : "babel-loader"
 			} ]
 		}, {
-			test : /\.css$/,
-			// exclude : /node_modules/,
-			use : [ {
-				loader : "style-loader" // creates style nodes from JS strings
-			}, {
-				loader : "css-loader" // translates CSS into CommonJS
-			} ]
-		}, {
 			test : /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
 			use : [ {
 				loader : 'file-loader',
@@ -44,6 +43,20 @@ module.exports = {
 					name : '[name].[ext]',
 					outputPath : 'static/media/'
 				}
+			} ]
+		}, {
+			test : /\.css$/,
+			// exclude : /node_modules/,
+			use : [ {
+				loader : MiniCssExtractPlugin.loader
+//			}, {
+//				loader : "style-loader" 
+			}, {
+				loader : "css-loader" 
+//			}, {
+//				loader : "postcss-loader" 
+//			}, {
+//				loader : "sass-loader" 
 			} ]
 		} ]
 	},
