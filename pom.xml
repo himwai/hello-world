@@ -14,7 +14,8 @@
 <!-- 		<spring.version>4.2.2.RELEASE</spring.version> -->
 		<spring.version>5.0.8.RELEASE</spring.version>
 		<activiti.version>5.21.0</activiti.version>
-		<hibernate.version>4.3.11.Final</hibernate.version>
+<!-- 		<hibernate.version>4.3.11.Final</hibernate.version> -->
+		<hibernate.version>5.3.6.Final</hibernate.version>
 		<jackson.version>2.9.4</jackson.version>
 		<frontend.maven.plugin.version>1.6</frontend.maven.plugin.version>
 		<node.version>v8.11.1</node.version>
@@ -397,7 +398,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
 		</dependency>
 
 		<dependency>
@@ -446,6 +446,31 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>24.0-jre</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cityray-platform-env</groupId>
+			<artifactId>cityray-platform-env</artifactId>
+			<version>0.4.x-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 		</dependency>
 	</dependencies>
 
