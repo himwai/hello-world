@@ -63,7 +63,7 @@
 	},
 	"dependencies": {
 		"draft-js": "^0.10.5",
-		"npm": "^6.0.1",
+		"npm": "^6.13.4",
 		"react-bootstrap": "^0.32.1",
 		"react-bootstrap-sidebar": "0.0.1",
 		"react-draft-wysiwyg": "^1.12.13"
