@@ -39,35 +39,35 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.github.eirslett</groupId>
-				<artifactId>frontend-maven-plugin</artifactId>
-				<version>${frontend.maven.plugin.version}</version>
-				<configuration>
-					<workingDirectory>./src/js-webpack</workingDirectory>
-					<installDirectory>target</installDirectory>
-					<skip>${skip.frontend}</skip>
-				</configuration>
-				<executions>
-					<execution>
-						<id>node-npm-install</id>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-						<configuration>
-							<nodeVersion>${node.version}</nodeVersion>
-							<npmVersion>${npm.version}</npmVersion>
-						</configuration>
-					</execution>
-					<execution>
-						<id>npm-install</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
-					</execution>
+<!-- 			<plugin> -->
+<!-- 				<groupId>com.github.eirslett</groupId> -->
+<!-- 				<artifactId>frontend-maven-plugin</artifactId> -->
+<!-- 				<version>${frontend.maven.plugin.version}</version> -->
+<!-- 				<configuration> -->
+<!-- 					<workingDirectory>./src/js-webpack</workingDirectory> -->
+<!-- 					<installDirectory>target</installDirectory> -->
+<!-- 					<skip>${skip.frontend}</skip> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>node-npm-install</id> -->
+<!-- 						<goals> -->
+<!-- 							<goal>install-node-and-npm</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<nodeVersion>${node.version}</nodeVersion> -->
+<!-- 							<npmVersion>${npm.version}</npmVersion> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
+<!-- 					<execution> -->
+<!-- 						<id>npm-install</id> -->
+<!-- 						<goals> -->
+<!-- 							<goal>npm</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<arguments>install</arguments> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
 					<!-- <execution> -->
 					<!-- <id>npm-build</id> -->
 					<!-- <goals> -->
@@ -83,8 +83,8 @@
 					<!-- <goal>webpack</goal> -->
 					<!-- </goals> -->
 					<!-- </execution> -->
-				</executions>
-			</plugin>
+	<!-- </executions> -->
+	<!-- </plugin> -->
 
 		</plugins>
 	</build>
