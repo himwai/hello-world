@@ -11,10 +11,10 @@
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<jdk.version>11</jdk.version>
-<!-- 		<spring.version>4.2.2.RELEASE</spring.version> -->
+		<!-- <spring.version>4.2.2.RELEASE</spring.version> -->
 		<spring.version>5.2.4.RELEASE</spring.version>
 		<activiti.version>5.21.0</activiti.version>
-<!-- 		<hibernate.version>4.3.11.Final</hibernate.version> -->
+		<!-- <hibernate.version>4.3.11.Final</hibernate.version> -->
 		<hibernate.version>5.4.2.Final</hibernate.version>
 		<jackson.version>2.9.4</jackson.version>
 		<frontend.maven.plugin.version>1.6</frontend.maven.plugin.version>
@@ -28,6 +28,25 @@
 		<mssql.version>6.2.2.jre8</mssql.version>
 		<birt.version>4.4.2</birt.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>cityray-public</id>
+			<name>cityray public</name>
+			<url>http://192.168.1.228:8081/repository/cityray-group/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- <repository> -->
+		<!-- <id>vaadin-addons</id> -->
+		<!-- <url>http://maven.vaadin.com/vaadin-addons</url> -->
+		<!-- </repository> -->
+	</repositories>
 
 	<build>
 		<plugins>
@@ -39,52 +58,52 @@
 					<release>${jdk.version}</release>
 				</configuration>
 			</plugin>
-<!-- 			<plugin> -->
-<!-- 				<groupId>com.github.eirslett</groupId> -->
-<!-- 				<artifactId>frontend-maven-plugin</artifactId> -->
-<!-- 				<version>${frontend.maven.plugin.version}</version> -->
-<!-- 				<configuration> -->
-<!-- 					<workingDirectory>./src/js-webpack</workingDirectory> -->
-<!-- 					<installDirectory>target</installDirectory> -->
-<!-- 					<skip>${skip.frontend}</skip> -->
-<!-- 				</configuration> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>node-npm-install</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>install-node-and-npm</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<nodeVersion>${node.version}</nodeVersion> -->
-<!-- 							<npmVersion>${npm.version}</npmVersion> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-<!-- 					<execution> -->
-<!-- 						<id>npm-install</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>npm</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<arguments>install</arguments> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-					<!-- <execution> -->
-					<!-- <id>npm-build</id> -->
-					<!-- <goals> -->
-					<!-- <goal>npm</goal> -->
-					<!-- </goals> -->
-					<!-- <configuration> -->
-					<!-- <arguments>run build</arguments> -->
-					<!-- </configuration> -->
-					<!-- </execution> -->
-					<!-- <execution> -->
-					<!-- <id>webpack</id> -->
-					<!-- <goals> -->
-					<!-- <goal>webpack</goal> -->
-					<!-- </goals> -->
-					<!-- </execution> -->
-	<!-- </executions> -->
-	<!-- </plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>com.github.eirslett</groupId> -->
+			<!-- <artifactId>frontend-maven-plugin</artifactId> -->
+			<!-- <version>${frontend.maven.plugin.version}</version> -->
+			<!-- <configuration> -->
+			<!-- <workingDirectory>./src/js-webpack</workingDirectory> -->
+			<!-- <installDirectory>target</installDirectory> -->
+			<!-- <skip>${skip.frontend}</skip> -->
+			<!-- </configuration> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <id>node-npm-install</id> -->
+			<!-- <goals> -->
+			<!-- <goal>install-node-and-npm</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <nodeVersion>${node.version}</nodeVersion> -->
+			<!-- <npmVersion>${npm.version}</npmVersion> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>npm-install</id> -->
+			<!-- <goals> -->
+			<!-- <goal>npm</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <arguments>install</arguments> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>npm-build</id> -->
+			<!-- <goals> -->
+			<!-- <goal>npm</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <arguments>run build</arguments> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>webpack</id> -->
+			<!-- <goals> -->
+			<!-- <goal>webpack</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
 
 		</plugins>
 	</build>
@@ -422,15 +441,15 @@
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.fasterxml.jackson.datatype</groupId> -->
-<!-- 			<artifactId>jackson-datatype-jsr310</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.datatype</groupId> -->
+		<!-- <artifactId>jackson-datatype-jsr310</artifactId> -->
+		<!-- </dependency> -->
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.fasterxml.jackson.dataformat</groupId> -->
-<!-- 			<artifactId>jackson-dataformat-xml</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.dataformat</groupId> -->
+		<!-- <artifactId>jackson-dataformat-xml</artifactId> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
