@@ -10,12 +10,12 @@
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>11</jdk.version>
 <!-- 		<spring.version>4.2.2.RELEASE</spring.version> -->
-		<spring.version>5.0.8.RELEASE</spring.version>
+		<spring.version>5.2.4.RELEASE</spring.version>
 		<activiti.version>5.21.0</activiti.version>
 <!-- 		<hibernate.version>4.3.11.Final</hibernate.version> -->
-		<hibernate.version>5.3.6.Final</hibernate.version>
+		<hibernate.version>5.4.2.Final</hibernate.version>
 		<jackson.version>2.9.4</jackson.version>
 		<frontend.maven.plugin.version>1.6</frontend.maven.plugin.version>
 		<node.version>v8.11.1</node.version>
@@ -34,9 +34,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<release>${jdk.version}</release>
 				</configuration>
 			</plugin>
 <!-- 			<plugin> -->
