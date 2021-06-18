@@ -12,10 +12,10 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<jdk.version>11</jdk.version>
 		<!-- <spring.version>4.2.2.RELEASE</spring.version> -->
-		<spring.version>5.2.4.RELEASE</spring.version>
+		<spring.version>5.2.15.RELEASE</spring.version>
 		<activiti.version>5.21.0</activiti.version>
 		<!-- <hibernate.version>4.3.11.Final</hibernate.version> -->
-		<hibernate.version>5.4.2.Final</hibernate.version>
+		<hibernate.version>5.4.15.Final</hibernate.version>
 		<jackson.version>2.9.4</jackson.version>
 		<frontend.maven.plugin.version>1.6</frontend.maven.plugin.version>
 		<node.version>v8.11.1</node.version>
@@ -26,7 +26,7 @@
 		<jstl.version>1.2</jstl.version>
 		<servletapi.version>3.1.0</servletapi.version>
 		<mssql.version>6.2.2.jre8</mssql.version>
-		<birt.version>4.4.2</birt.version>
+		<birt.version>4.5.0a</birt.version>
 	</properties>
 	
 	<repositories>
