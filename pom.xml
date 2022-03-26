@@ -16,7 +16,7 @@
 		<activiti.version>5.21.0</activiti.version>
 		<!-- <hibernate.version>4.3.11.Final</hibernate.version> -->
 		<hibernate.version>5.4.2.Final</hibernate.version>
-		<jackson.version>2.9.4</jackson.version>
+		<jackson.version>2.13.2.1</jackson.version>
 		<frontend.maven.plugin.version>1.6</frontend.maven.plugin.version>
 		<node.version>v8.11.1</node.version>
 		<npm.version>5.6.0</npm.version>
